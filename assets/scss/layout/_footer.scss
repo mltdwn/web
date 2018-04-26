@@ -1,0 +1,121 @@
+@import "../variables/colors";
+@import "../variables/grid";
+
+$footer-border: 1px solid #f0f0f0;
+$footer-grid: $grid;
+$footer-color: $color-gray-content;
+$footer-cc-size: 14px;
+$footer-padding-mobile: 2rem 0;
+$footer-padding-desktop: 5rem 0;
+$footer-rrss-width-mobile: 28px;
+$footer-rrss-width-desktop: 40px;
+
+.footer {
+  border-top: $footer-border;
+  color: $footer-color;
+  display: flex;
+  font-size: 0.85rem;
+  flex-flow: column-reverse wrap;
+  justify-content: space-between;
+  margin: 4rem auto 0 auto;
+  max-width: $footer-grid;
+  padding: $footer-padding-mobile;
+  text-align: center;
+  width: 90%;
+}
+
+.footer__section {
+  font-size: 0.85rem;
+}
+
+.footer__section--credits {
+  font-family: $font-family-second;
+  opacity: .6;
+  padding: 2rem 0 4rem 0;
+}
+
+.footer__cc {
+  display: inline-block;
+}
+
+.footer__rrss {
+  display: inline-block;
+  margin: 0 .5rem;
+  text-align: center;
+  text-decoration: none;
+  width: $footer-rrss-width-mobile;
+
+  .icon {
+    display: inline-block;
+    height: auto;
+    fill: $color-gray;
+    max-width: 32px;
+    transition: fill .2s, transform .3s;
+    width: 100%;
+  }
+}
+
+.footer__rrss--dribbble:hover {
+  .icon {
+    fill: #ea4c89;
+    transform: translateY(-.25rem);
+  }
+}
+
+.footer__rrss--github:hover {
+  .icon {
+    fill: $color-black;
+    transform: translateY(-.25rem);
+  }
+}
+
+.footer__rrss--telegram:hover {
+  .icon {
+    fill: #0088cc;
+    transform: translateY(-.25rem);
+  }
+}
+
+.footer__rrss--instagram:hover {
+  .icon {
+    fill: #405de6;
+    transform: translateY(-.25rem);
+  }
+}
+
+.footer__rrss--twitter:hover {
+  .icon {
+    fill: #1da1f2;
+    transform: translateY(-.25rem);
+  }
+}
+
+.footer__rrss-span {
+  display: none;
+}
+
+@media #{$breakpoints-large} {
+  .footer {
+    flex-flow: row wrap;
+    padding: $footer-padding-desktop;
+    text-align: left;
+  }
+
+  .footer__section {
+    flex: 0 1 50%;
+  }
+
+  .footer__section--rrss {
+    text-align: right;
+  }
+
+  .footer__section--credits {
+    padding-top: 1rem;
+  }
+
+  .footer__rrss {
+    margin: 0 0 0 1rem;
+    text-align: right;
+    width: $footer-rrss-width-desktop;
+  }  
+}

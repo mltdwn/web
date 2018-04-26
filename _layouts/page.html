@@ -1,0 +1,15 @@
+---
+layout: default
+---
+{% assign author = site.authors[page.author] %}
+<div class="page">
+  <h1 class="page__title">
+    {{ page.title }}
+  </h1>
+  <div class="page__meta">
+    {% include atoms/post-meta.html %}
+  </div>
+  <div class="page__content">
+    {{ content }}
+  </div>
+</div>

@@ -1,0 +1,73 @@
+@import "../variables/breakpoints";
+@import "../variables/grid";
+@import "../variables/transitions";
+
+$header-max-width: $grid;
+
+.header {  
+  align-items: center;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  margin: auto;
+  max-width: $header-max-width;
+  padding: 0;
+  position: relative;
+  width: 90%;
+  z-index: 15;
+}
+
+.header__section {
+  padding: 1.5rem 0;
+}
+
+.header__logo-link {
+  font-family: $font-family-first;
+  font-size: 1.25rem;
+  font-weight: bold;
+  position: relative;
+  text-decoration: none;
+  transition: opacity .2s;
+  width: 140px;
+}
+
+.header__logo-link:after {
+  background: $color-black;
+  content: '';
+  display: block;
+  height: 4px;
+  width: 27px;
+}
+
+.header__nav {
+  text-align: right;
+}
+
+.header__nav-link {
+  color: #888;
+  display: inline-block;
+  font-family: $font-family-first;
+  font-size: .85rem;
+  padding: 0 0 0 1rem;
+  text-decoration: none;
+  transition: color .2s;
+}
+
+.header__nav-link:hover {
+  color: $color-black;
+}
+
+@media #{$breakpoints-large} {
+  .header {
+    padding: 2rem 0;
+  }
+
+  .header__logo-link {
+    font-size: 2rem;
+  }
+
+  .header__nav-link {
+    font-size: 1rem,;
+    padding: 0 0 0 3rem;
+  }
+}

@@ -1,0 +1,28 @@
+# general content
+
+title: jekyll example
+email: alex@worldx3.com
+description: Basic template for jekyll
+baseurl: "" # the subpath of your site, e.g. /blog
+url: # the base hostname & protocol for your site, e.g. http://example.com
+
+# Build settings
+markdown: kramdown
+exclude:
+  - Gemfile
+  - Gemfile.lock
+
+# Sass settings
+
+sass:
+  sass_dir: assets/scss
+  style: :compressed
+
+# Gems
+
+gems:
+  - jekyll-feed
+
+authors:
+  gruncho:
+    name: gruncho
