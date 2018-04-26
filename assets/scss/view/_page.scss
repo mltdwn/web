@@ -1,0 +1,49 @@
+@import "../variables/colors";
+@import "../variables/grid";
+@import "../import/font";
+
+$page-max-width: $grid-content;
+$page-padding: 4rem;
+
+.page {
+  margin: auto;
+  max-width: 680px;
+  width: 80%;
+}
+
+.page__meta {
+  color: $color-gray;
+  font-size: 1rem;
+  padding-bottom: $page-padding;
+  text-align: center;
+}
+
+.page__title {
+  font-family: $font-family-first;
+  font-size: 3rem;
+  padding: $page-padding 0 2rem 0;
+  text-align: center;
+}
+
+.page__content {
+  font-size: 1rem;
+  line-height: 1.75rem;
+
+  p,
+  ul,
+  ol,
+  quote,
+  img {
+    margin-bottom: 1rem;
+  }
+
+
+  h2,
+  h3,
+  h4,
+  h5 {
+    font-size: 2rem;
+    line-height: 2rem;
+    margin: 2rem 0;
+  }
+}
