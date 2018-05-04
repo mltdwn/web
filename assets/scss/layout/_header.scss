@@ -32,17 +32,10 @@ $header-max-width: $grid;
   width: 140px;
 }
 
-.header__logo-link:after {
-  background: $color-black;
-  content: '';
-  display: block;
-  height: 4px;
-  width: 27px;
-}
-
 .header__logo{
   width: 15rem;
 }
+
 .header__nav {
   text-align: right;
 }
