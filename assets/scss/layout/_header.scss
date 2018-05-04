@@ -10,6 +10,7 @@ $header-max-width: $grid;
   flex-flow: row nowrap;
   justify-content: space-between;
   margin: auto;
+  margin-bottom: -11rem;
   max-width: $header-max-width;
   padding: 0;
   position: relative;
@@ -39,6 +40,9 @@ $header-max-width: $grid;
   width: 27px;
 }
 
+.header__logo{
+  width: 15rem;
+}
 .header__nav {
   text-align: right;
 }
