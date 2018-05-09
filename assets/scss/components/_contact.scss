@@ -1,0 +1,97 @@
+$contact-content-font-family: $font-family-first;
+$contact-content-bottom-mobile: 5%;
+$contact-content-bottom-desktop: 10%;
+$contact-content-left-mobile: 5%;
+$contact-content-left-desktop: calc( 50% - #{$grid} / 2 );
+$contact-link-font-family: $font-family-second;
+$contact-link-border: 4px solid $color-white;
+$contact-link-border-radius: $border-radius-first;
+
+.contact {
+  background-image: url('../../assets/images/fondo-contact.png');
+  font-size: 3rem;
+  height: 100vh;
+  padding: 0;
+  position: relative;
+  z-index: 5;
+}
+
+.contact__grid{
+  align-items: center;
+  display: grid;
+  grid-template-rows: 50% 50%;
+  height: 100%;
+
+}
+
+.contact__title{
+  text-align: center;
+  color: white;
+}
+
+.contact__picture{
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-size: 200%;
+  padding-left: 10%;
+  padding-right: 10%;
+
+}
+
+@media #{$breakpoints-medium} {
+  .contact{
+    background-size: 100%;
+    background-attachment: fixed;
+  }
+
+  .contact__picture{
+    padding-left: 20%;
+    padding-right: 20%;
+  }
+
+  .contact__title {
+    font-size: 2.5rem;
+  }
+}
+
+@media #{$breakpoints-large} {
+  .contact{
+    background-size: 100%;
+    background-attachment: fixed;
+  }
+  .contact__content {
+    bottom: $contact-content-bottom-desktop;
+    left: $contact-content-left-desktop;
+  }
+
+  .contact__picture{
+    padding-left: 20%;
+    padding-right: 20%;
+  }
+
+  .contact__subtitle {
+    font-size: 1.25rem;
+  }
+
+  .contact__title {
+    font-size: 6.25rem;
+  }
+}
+
+@media #{$breakpoints-xlarge} {
+  .contact{
+    background-size: 100%;
+    background-attachment: fixed;
+  }
+  
+  .contact__picture{
+    padding-left: 20%;
+    padding-right: 20%;
+  }
+
+  .contact__title {
+    background-size: 100%;
+    font-size: 3rem;
+  }
+}
+
