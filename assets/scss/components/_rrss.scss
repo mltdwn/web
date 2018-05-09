@@ -1,0 +1,119 @@
+$rrss-max-width: $grid;
+$rrss-content-box-shadow: 1px 6px 25px rgba(0,0,0,.2);
+$rrss-link-color: $color-white;
+$rrss-link-youtube-background: $color-youtube;
+$rrss-link-spotify-background: $color-spotify;
+$rrss-link-instagram-background: $color-instagram;
+$rrss-link-before-size: 20px;
+
+.rrss {
+  justify-content: space-between; // colocar horizontalmente
+  display: flex; // hola soy flex
+  flex-flow: column wrap;
+  margin: 15rem auto;
+  max-width: $rrss-max-width;
+  width: 90%;
+}
+
+.rrss__box {
+  padding: 0 1rem;
+}
+
+.rrss__content {
+  background: #33ff33;
+  box-shadhow: $rrss-content-box-shadow;
+  padding: 10rem 2rem 3rem 2rem;
+}
+
+.rrss__content--spotify {
+  background: transparent url('../images/rrss/01.jpg') no-repeat;
+}
+
+.rrss__content--youtube {
+  background: transparent url('../images/rrss/02.jpg') no-repeat;
+}
+
+.rrss__content--instagram {
+  background: transparent url('../images/rrss/03.jpg') no-repeat;
+}
+
+.rrss__content--spotify,
+.rrss__content--youtube,
+.rrss__content--instagram {
+  background-size: cover;
+}
+
+.rrss__title {
+  color: $color-white;
+  font-size: 1.5rem;
+  font-family: $font-family-first;
+  margin-bottom: 2rem;
+}
+
+.rrss__link {
+  border-radius: 64px;
+  color: $rrss-link-color;
+  font-size: .85rem;
+  letter-spacing: 1px;
+  padding: 1rem 1.5rem;
+  text-decoration: none;
+  text-transform: uppercase;
+  transition: padding .2s;
+
+  &:before {
+    content: '';
+    display: inline-block;
+    height: $rrss-link-before-size;
+    transform: translate(-7px, 4px);
+    width: $rrss-link-before-size;
+  }
+}
+
+.rrss__link:hover {
+  padding: 1rem 2rem;
+}
+
+.rrss__link--youtube {
+  background: $rrss-link-youtube-background;
+
+  &:before {
+    background: transparent url('../svg/youtube.svg') no-repeat;
+    background-size: cover;
+    transform: translate(-8px, 6px);
+  }
+}
+
+.rrss__link--spotify {
+  background: $rrss-link-spotify-background;
+
+  &:before {
+    background: transparent url('../svg/spotify.svg') no-repeat;
+    background-size: cover;
+  }
+}
+
+.rrss__link--instagram {
+  background: $rrss-link-instagram-background;
+
+  &:before {
+    background: transparent url('../svg/instagram.svg') no-repeat;
+    background-size: cover;
+  }
+}
+
+
+@media #{$breakpoints-medium} {
+  .rrss {
+    flex-flow: row wrap;
+  }
+
+  .rrss__box {
+    flex: 0 1 50%;
+  }
+}
+
+@media #{$breakpoints-large} {
+  .rrss__box {
+    flex: 0 1 calc( 100%/3 );
+  }
+}
