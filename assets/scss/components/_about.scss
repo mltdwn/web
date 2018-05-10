@@ -1,0 +1,103 @@
+$about-max-width: $grid;
+$about-content-box-shadow: 1px 6px 25px rgba(0,0,0,.2);
+
+.about{
+  margin: auto;
+  max-width: $about-max-width;
+  padding: 10% 0 10% 0;
+  position: relative;
+  width: 80%;
+  z-index: 5; 
+}
+
+.about-text{
+
+}
+
+.about-text__text{
+  font-size: 1rem;
+  text-align: justify;
+}
+
+.profiles{
+  display: flex; // hola soy flex
+  flex-flow: row wrap;
+  justify-content: space-between; // colocar horizontalmente
+}
+
+.profiles__box{
+  flex: 0 1 calc( 100%/2 );
+  transition: opacity .2s;
+}
+
+.profiles__box:hover{
+  opacity: 0.5;
+}
+
+.profiles__content{
+  background: #33ff33;
+  box-shadhow: $about-content-box-shadow;
+  padding: 10rem 2rem 8rem 2rem;
+}
+
+.profiles__content--amunda{
+  background: transparent url('../images/profiles/amunda.jpg') no-repeat;
+}
+
+.profiles__content--pablo{
+  background: transparent url('../images/profiles/pablo.jpg') no-repeat;
+}
+
+.profiles__content--sasu{
+  background: transparent url('../images/profiles/sasu.jpg') no-repeat;
+}
+
+.profiles__content--bittor{
+  background: transparent url('../images/profiles/bittor.jpg') no-repeat;
+}
+
+.profiles__content--julen{
+  background: transparent url('../images/profiles/julen.jpg') no-repeat;
+}
+
+.profiles__content--amunda,
+.profiles__content--pablo,
+.profiles__content--sasu,
+.profiles__content--bittor,
+.profiles__content--julen{
+  background-size: cover;
+}
+
+@media #{$breakpoints-medium} {
+  .about-text__text{
+    column-count: 2;
+    font-size: 1.5rem;
+  }
+
+  .profiles{
+    flex-flow: row wrap;
+  }
+
+  .profiles__box{
+    flex: 0 1 calc( 100%/3 );
+  }
+
+}
+
+@media #{$breakpoints-large} {
+  .about-text__text{
+    column-count: 2;
+    font-size: 1.5rem;
+  }
+
+  .profiles__box{
+    flex: 0 1 calc( 100%/5 );
+  }
+}
+
+@media #{$breakpoints-xlarge} {
+  .about-text__text{
+    column-count: 2;
+    font-size: 1.5rem;
+  }
+}
